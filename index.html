@@ -4,18 +4,62 @@
   <meta charset="utf-8">
   <title>Registration form</title>
   <link rel="stylesheet" href="css/modules.css">
-  <link rel="stylesheet" href="css/type.css">
   <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/type.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
-  <section>
-    <div class="">
-      <h1>Want to go to Mars?</h1>
+  <div class="max-length pad-t pad-b">
+    <form class="island" method="POST" action="https://formspree.io/fuen0015@algonquinlive.com">
+      <h1 class="border not-bold">Want to go to Mars?</h1>
+      <div>
+        <p class="mega">We’re looking for super-awesome human beings who want to make the long trek to Mars for the adventure of a lifetime.</p>
+      </div>
+      <fieldset>
+        <legend class="push-1-2 giga italic not-bold">Personal details</legend>
+        <div class="grid">
+          <div class=" unit xs-1 s-1 m-1 l-1-2 pad-b space-right">
+            <label for="name">Name</label>
+            <input id="name" name="name" required>
+          </div>
+          <div class="unit xs-1 s-1 m-1 l-1-2 pad-b space-left">
+            <label for="age">Age</label>
+            <input id="age" name="age" required>
+          </div>
+          <div class="unit xs-1 s-1 m-1 l-1-2 pad-b space-right">
+            <label for="email">Email</label>
+            <input id="email" name="email" required>
+          </div>
+          <div class="unit xs-1 s-1 m-1 l-1-2 pad-b space-left">
+            <label for="option">Physical fitness</label>
+            <select id="option" name="option">
+              <option>Super-human</option>
+              <option>Fit as a fiddle</option>
+              <option>Not terribly strong</option>
+              <option>A little couch-potato-y</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="details">Address</label>
+          <textarea id="details" name="details" required></textarea>
+        </div>
+      </fieldset>
 
-    </div>
-  </section>
-
+      <fieldset>
+        <legend class="giga italic not-bold">Mission statement</legend>
+        <div class="pad-t">
+          <label for="question">Why do you want to go to Mars?</label>
+          <textarea id="question" name="question"></textarea>
+        </div>
+      </fieldset>
+      <div class="text-center">
+        <button class="btn" type="submit">Register for the trip!</button>
+      </div>
+      <input type="hidden" name="_subject" value="Request to join the mission">
+    </form>
+  </div>
 </body>
 </html>
